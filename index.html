@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="om">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI LOQOODA BOORANAA</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#172554}
+header{background:#102b50;color:white;padding:25px 15px;text-align:center}
+header h1{color:#f5c542}
+nav{background:#173d68;padding:14px;text-align:center}
+nav a{color:white;margin:8px;text-decoration:none}
+main{max-width:850px;margin:25px auto;padding:15px}
+.card{background:white;padding:20px;margin:15px 0;border-radius:12px;box-shadow:0 2px 9px #ccd5e0}
+button{background:#173d68;color:white;border:0;padding:12px 20px;border-radius:8px}
+input,textarea{width:95%;padding:12px;margin:10px 0;border:1px solid #bbb;border-radius:7px}
+footer{text-align:center;padding:20px;background:#102b50;color:white}
+</style>
+</head>
+<body>
+<header>
+<h1>AI LOQOODA BOORANAA</h1>
+<p>Afaan Booranaa • Aadaa • Barnoota • Hiikkaa</p>
+</header>
+<nav>
+<a href="#home">Mana</a>
+<a href="#dictionary">Galmee Jechootaa</a>
+<a href="#translation">Hiikkaa</a>
+<a href="#culture">Aadaa</a>
+</nav>
+<main id="home">
+<div class="card">
+<h2>Baga Nagaan Dhuftan!</h2>
+<p>Kuusaa beekumsaa, afaanii fi aadaa Booranaa.</p>
+</div>
+<div class="card" id="dictionary">
+<h2>Galmee Jechootaa</h2>
+<input id="word" placeholder="Jecha Booranaa barreessi">
+<input id="meaning" placeholder="Hiika isaa barreessi">
+<button onclick="addWord()">Galmeessi</button>
+<ul id="words"></ul>
+</div>
+<div class="card" id="translation">
+<h2>Hiikkaa</h2>
+<textarea id="source" placeholder="Barreeffama as barreessi..."></textarea>
+<p>Hiikkaan AI yeroo ammaa hin qindaa'in.</p>
+</div>
+<div class="card" id="culture">
+<h2>Aadaa fi Seenaa Booranaa</h2>
+<p>Afaan, seenaa, aadaa fi duudhaa hawaasa Booranaa baradhu.</p>
+</div>
+</main>
+<footer>© 2026 AI LOQOODA BOORANAA</footer>
+<script>
+function addWord(){
+let w=document.getElementById('word').value.trim();
+let m=document.getElementById('meaning').value.trim();
+if(!w||!m){alert('Jecha fi hiika guuti');return;}
+let li=document.createElement('li');
+li.textContent=w+' — '+m;
+document.getElementById('words').appendChild(li);
+document.getElementById('word').value='';
+document.getElementById('meaning').value='';
+}
+</script>
+</body>
+</html>
